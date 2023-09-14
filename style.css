@@ -1,0 +1,286 @@
+:root{
+    --primary-color: #f8f4e4 ;
+    --secondary-color: #a5b3aa;
+    --product-color: #fefeeb;
+    --font-color: #4e3f30 ;
+    --other-color: #0ca5b0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+/*header*/
+
+.header-container{
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.header-icon{
+    height: 120px;
+    width: 130px;
+}
+.header-search-bar{
+    width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    display: flex;
+    padding: 5px 10px;
+    align-items: center;
+}
+.header-search-bar:focus-within{
+    border: 1px solid #aaa;
+    box-shadow: 0px 2px 2px rgb(173, 157, 157);
+}
+.header-search-bar input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--primary-color);
+    width: 90%;
+}
+.header-search-bar button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: var(--font-color);
+}
+.header-search-bar button:hover{
+    color: var(--other-color);
+}
+
+.header-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+.header-nav ul a{
+    text-decoration: none;
+    color: var(--font-color);
+}
+.header-nav ul a:hover{
+    color: var(--other-color);
+}
+/* ------ */
+
+/*tarjetas de productos*/
+
+.hombres-deportivas-section-container, .mujeres-deportivas-section-container, .niños-section-container{
+    background-color: var(--secondary-color);
+    height: 1100px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--font-color);
+}
+.hombres-deportivas-section-container, .mujeres-deportivas-section-container, .niños-section-container h1{
+    font-size: 24px;
+}
+.hombres-deportivas-productos-container{
+    width: 80%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hombres-deportivas-producto{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 30%;
+    background-color: var(--product-color);
+    border-radius: 8%;
+    box-shadow: 0px 2px 9px #0000005a;
+    position: relative;
+}
+.hombres-deportivas-producto img{
+    height: 200px;
+    width: 100%;
+    border-radius: 8%;
+    object-fit: cover;
+}
+.detalles{
+    padding: 20px;
+    color: var(--font-color);
+}
+.detalles h2{
+    font-size: 24px;
+    margin: 0;
+}
+.detalles p{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.detalles a{
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #4e3f30 ;
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.detalles a:hover{
+    color: var(--other-color);
+}
+
+
+/* ------ */
+/*banners de descuentos*/
+.descuentos{
+    height: 250px;
+    position: relative;
+}
+.descuentos img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 0;
+}
+.descuentos a{
+    position: absolute;
+    z-index: 1;
+    left: 1200px;
+    top: 200px;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #FFDE59;
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+}
+.descuentos a:hover{
+    background-color: #EECD48;
+}
+
+/*------------*/
+
+
+
+/* footer formulario*/
+
+
+.formulario{
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+.formulario img{
+    height: 120px;
+    width: 120px;
+}
+.formulario h2{
+    margin: 0 50px;
+}
+.campo{
+    margin-right: 550px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.campo input{
+    border: none;
+    border-radius: 10px;
+    background-color: none;
+    height: 30px;
+    width: 250px;
+    padding: 10px;
+}
+.campo input[type='text']{
+    margin:10px 0 10px 95px;
+}
+.campo textarea{
+    margin: 10px 0 10px 90px;
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+}
+.boton-enviar{
+    margin-left: 190px;
+}
+.boton-enviar button{
+    font-size: 16px;
+}
+
+
+.contact nav ul{
+    margin-left: 10px;
+    padding: 0;
+}
+.contact nav li{
+    list-style: none;
+}
+
+.contact img{
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+
+/* media queries*/
+
+@media (width <= 1500px){
+    .header-nav{
+        margin-right: 25px;
+    }
+    .descuentos a{
+        left: 1000px;
+    }
+    .campo{
+        margin-right: 100px;
+    }
+    
+    .campo input[type='email']{
+       margin-left: 50px;
+    }
+    
+}
+
+
+@media(width <=1100px){
+    .header-container{
+        width: 1000px;
+    }
+    .hombres-deportivas-section-container, .mujeres-deportivas-section-container, .niños-section-container{
+        width: 1100px;
+    }
+    .descuentos{
+        width: 1100px;
+    }
+    .descuentos a{
+        left: 800px;
+    }
+    .formulario{
+        width: 1100px;
+    }
+    .campo input{
+        width: 200px;
+    }
+}
+
+@media(width<=950px){
+    .descuentos a{
+        left: 800px;
+    }
+}
